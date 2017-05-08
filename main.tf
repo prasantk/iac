@@ -27,8 +27,8 @@ data "template_file" "user_data1" {
     template = "${file("user-data.sh")}"
 
     vars {
-        server_name = "www-1"
-        server_legend = "blue"
+        image_url = "${var.image_url}/iac-blue.png"
+        server_port = "${var.server_port}"
     }
 }
 
@@ -36,8 +36,8 @@ data "template_file" "user_data2" {
     template = "${file("user-data.sh")}"
 
     vars {
-        server_name = "www-2"
-        server_legend = "orange"
+        image_url = "${var.image_url}/iac-orange.png"
+        server_port = "${var.server_port}"
     }
 }
 

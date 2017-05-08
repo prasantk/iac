@@ -1,8 +1,3 @@
 #!/bin/bash
-
-apt-get update
-apt-get install -y nginx
-
-cat > /var/www/html/index.html <<EOF
-<h1 style="color:${server_legend}">${server_name}</h1>
-EOF
+echo "<html><p style=\"text-align:center;\"><img src=\"${image_url}\" alt=\"Infrastructure As Code\" /></p></html>" > index.html
+nohup busybox httpd -f -p "${server_port}" &

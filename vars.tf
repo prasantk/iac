@@ -17,3 +17,11 @@ variable "do_private_key" {
 variable "do_ssh_ids" {
   type = "list"
 }
+
+variable "server_port" {
+  default = "80"
+}
+
+variable "image_url" {
+  default = "https://raw.githubusercontent.com/prasantk/iac/master/images"
+}
